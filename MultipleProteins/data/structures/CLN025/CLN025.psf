@@ -1,0 +1,31 @@
+PSF CMAP CHEQ XPLOR
+
+       2 !NTITLE
+* Coarse Grained System PSF FILE
+* DATE: Fri Sep 10 10:48:59 2021 CREATED BY USER: DINGXQ
+
+      10 !NATOM
+       1 CGM  1    TYR  CA   CA         0.000000      0.000000       0      0.000000
+       2 CGM  2    TYR  CA   CA         0.000000      0.000000       0      0.000000
+       3 CGM  3    ASP  CA   CA         0.000000      0.000000       0      0.000000
+       4 CGM  4    PRO  CA   CA         0.000000      0.000000       0      0.000000
+       5 CGM  5    GLU  CA   CA         0.000000      0.000000       0      0.000000
+       6 CGM  6    THR  CA   CA         0.000000      0.000000       0      0.000000
+       7 CGM  7    GLY  CA   CA         0.000000      0.000000       0      0.000000
+       8 CGM  8    THR  CA   CA         0.000000      0.000000       0      0.000000
+       9 CGM  9    TRP  CA   CA         0.000000      0.000000       0      0.000000
+      10 CGM  10   TYR  CA   CA         0.000000      0.000000       0      0.000000
+
+       9 !NBOND: bonds
+       1       2       2       3       3       4       4       5
+       5       6       6       7       7       8       8       9
+       9      10
+
+       0 !NTHETA: angles
+
+
+       0 !NPHI: dihedrals
+
+
+       0 !NIMPHI: impropers
+

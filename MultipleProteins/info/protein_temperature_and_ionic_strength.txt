@@ -1,0 +1,15 @@
+# ionic_strength: num of positive ions per nm^3
+name,temperature,ionic_strength
+CLN025,340.,0.03125
+2JOF,290.,0.03914
+1FME,325.,0.03853
+2F4K,360.,0.02409
+GTT,360.,0.02134
+NTL9,355.,0.06022
+2WAV,298.,0.12044
+PRB,340.,0.03011
+UVF,360., 0.02710
+NuG2,350.,0.06022
+A3D,370.,0.00381
+lambda,350.,0.03011
+

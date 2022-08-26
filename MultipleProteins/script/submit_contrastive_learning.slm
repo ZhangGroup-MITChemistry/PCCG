@@ -1,0 +1,71 @@
+#!/bin/bash
+#SBATCH --job-name=CL
+#SBATCH --time=3-00:00:00
+#SBATCH --partition=normal
+#SBATCH --nodes=6
+#SBATCH --gres=gpu:volta:2
+#SBATCH --exclusive
+#SBATCH --open-mode=truncate
+#SBATCH --output=./slurm_output/CL.txt
+
+export OMP_NUM_THREADS=$SLURM_CPUS_ON_NODE
+
+## get node names
+nodelist=$(scontrol show hostnames $SLURM_JOB_NODELIST)
+echo "node list: $nodelist"
+nodes_array=($nodelist)
+
+srun --nodes=1 --ntasks=1 --nodelist=${nodes_array[0]} \
+     --output=./slurm_output/ip_address_${SLURM_JOB_ID}.txt \
+     --open-mode=truncate \
+     --error=/dev/null \
+     hostname --ip-address
+
+ip_prefix=$(cat ./slurm_output/ip_address_${SLURM_JOB_ID}.txt) # making redis-address
+suffix=':6379'
+ip_head=$ip_prefix$suffix
+
+export ip_head
+echo "ip_head: ${ip_head}"
+
+echo "STARTING HEAD at ${nodes_array[0]}"
+srun --nodes=1 --ntasks=1 --nodelist=${nodes_array[0]} \
+     ray start --head --block \
+     --port 6379 --temp-dir=/home/gridsan/dingxq/tmp/ray \
+     --num-cpus=$SLURM_CPUS_ON_NODE --num-gpus=2 &
+sleep 10
+
+for i in $(seq 1 $(( $SLURM_JOB_NUM_NODES-1 )) ); do
+    node=${nodes_array[$i]}
+    echo "STARTING WORKER $i at $node"
+    srun --nodes=1 --ntasks=1 --nodelist=$node \
+	 ray start --address=$ip_head --block \
+	 --num-cpus=${SLURM_CPUS_ON_NODE} --num-gpus=2 &
+    sleep 5
+done
+
+export RAY_ADDRESS=$ip_head
+
+weight_decay_list=(1e-8 1e-7 2e-7 5e-7 1e-6 2e-6 5e-6 1e-5)
+#weight_decay_list=(5e-7 1e-6 2e-6)
+for weight_decay in "${weight_decay_list[@]}"; do
+    SECONDS=0
+    python ./script/contrastive_learning.py --weight_decay $weight_decay --elec_type DH_2 --ss_type simple
+    echo "simple_elec, simple_ss, weight_decay:", $weight_decay, "elapsed time:", $SECONDS
+    sleep 10
+    
+    # SECONDS=0    
+    # python ./script/contrastive_learning.py --weight_decay $weight_decay --elec_type DH --ss_type extended
+    # echo "simple_elec, extended_ss, weight_decay:", $weight_decay, "elapsed time:", $SECONDS
+    # sleep 10
+    
+    # SECONDS=0
+    # python ./script/contrastive_learning.py --weight_decay $weight_decay --elec_type fshift --ss_type simple
+    # echo "fshift_elec, simple_ss, weight_decay:", $weight_decay, "elapsed time:", $SECONDS
+    # sleep 10
+    
+    # SECONDS=0    
+    # python ./script/contrastive_learning.py --weight_decay $weight_decay --elec_type fshift --ss_type extended
+    # echo "fshift_elec, extended_ss, weight_decay:", $weight_decay, "elapsed time:", $SECONDS
+    # sleep 10    
+done

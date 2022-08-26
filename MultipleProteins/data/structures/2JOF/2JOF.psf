@@ -1,0 +1,43 @@
+PSF CMAP CHEQ XPLOR
+
+       2 !NTITLE
+* Coarse Grained System PSF FILE
+* DATE: Fri Sep 10 10:48:59 2021 CREATED BY USER: DINGXQ
+
+      20 !NATOM
+       1 CGM  1    ASP  CA   CA         0.000000      0.000000       0      0.000000
+       2 CGM  2    ALA  CA   CA         0.000000      0.000000       0      0.000000
+       3 CGM  3    TYR  CA   CA         0.000000      0.000000       0      0.000000
+       4 CGM  4    ALA  CA   CA         0.000000      0.000000       0      0.000000
+       5 CGM  5    GLN  CA   CA         0.000000      0.000000       0      0.000000
+       6 CGM  6    TRP  CA   CA         0.000000      0.000000       0      0.000000
+       7 CGM  7    LEU  CA   CA         0.000000      0.000000       0      0.000000
+       8 CGM  8    ALA  CA   CA         0.000000      0.000000       0      0.000000
+       9 CGM  9    ASP  CA   CA         0.000000      0.000000       0      0.000000
+      10 CGM  10   GLY  CA   CA         0.000000      0.000000       0      0.000000
+      11 CGM  11   GLY  CA   CA         0.000000      0.000000       0      0.000000
+      12 CGM  12   PRO  CA   CA         0.000000      0.000000       0      0.000000
+      13 CGM  13   SER  CA   CA         0.000000      0.000000       0      0.000000
+      14 CGM  14   SER  CA   CA         0.000000      0.000000       0      0.000000
+      15 CGM  15   GLY  CA   CA         0.000000      0.000000       0      0.000000
+      16 CGM  16   ARG  CA   CA         0.000000      0.000000       0      0.000000
+      17 CGM  17   PRO  CA   CA         0.000000      0.000000       0      0.000000
+      18 CGM  18   PRO  CA   CA         0.000000      0.000000       0      0.000000
+      19 CGM  19   PRO  CA   CA         0.000000      0.000000       0      0.000000
+      20 CGM  20   SER  CA   CA         0.000000      0.000000       0      0.000000
+
+      19 !NBOND: bonds
+       1       2       2       3       3       4       4       5
+       5       6       6       7       7       8       8       9
+       9      10      10      11      11      12      12      13
+      13      14      14      15      15      16      16      17
+      17      18      18      19      19      20
+
+       0 !NTHETA: angles
+
+
+       0 !NPHI: dihedrals
+
+
+       0 !NIMPHI: impropers
+
