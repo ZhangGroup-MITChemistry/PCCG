@@ -1,6 +1,5 @@
 from scipy.interpolate import BSpline
 from scipy.integrate import quad
-from scipy.integrate import quadrature
 import numpy as np
 import math
 import matplotlib.pyplot as plt
