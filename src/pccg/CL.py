@@ -1,7 +1,6 @@
 import torch
 import numpy as np
 from scipy import optimize
-import simtk.unit as unit
 
 def contrastive_learning(log_q_noise, log_q_data,
                          basis_noise, basis_data,
@@ -34,9 +33,9 @@ def contrastive_learning(log_q_noise, log_q_data,
     assert(len(log_q_data) == basis_data.shape[0])
 
     basis_size = basis_noise.shape[-1]
-    alphas = torch.zeros(basis_size)
-    F = torch.zeros(1)
-    
+    alphas = torch.zeros(basis_size, dtype=torch.float64)
+    F = torch.zeros(1, dtype=torch.float64)
+
     x_init = np.concatenate([alphas.data.numpy(), F])
     
     def compute_loss_and_grad(x):
