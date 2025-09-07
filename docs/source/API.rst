@@ -3,9 +3,9 @@
 API
 =============
 
-.. autofunction:: pccg.spline.bs
-.. autofunction:: pccg.spline.pbs
-.. autofunction:: pccg.spline.bs_lj
-.. autofunction:: pccg.spline.bs_rmsd
-.. autofunction:: pccg.NCE
+.. autofunction:: pccg.splines.bs
+.. autofunction:: pccg.splines.pbs
+.. autofunction:: pccg.splines.bs_lj
+.. autofunction:: pccg.splines.bs_rmsd
+.. autofunction:: pccg.CL.contrastive_learning
 
