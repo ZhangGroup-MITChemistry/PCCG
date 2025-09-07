@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fold the mini-protein, chignolin &#8212; Potential Contrasting documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chignolin';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Potential Contrasting documentation - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Potential Contrasting documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="examples.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/MullerPotential/MullerPotential.html">Müller Potential Tutorial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">API</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/ZhangGroup-MITChemistry/PCCG" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chignolin.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fold the mini-protein, chignolin</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-all-atom-simulation-trajectory">1. Download the all-atom simulation trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-the-all-atom-trajectory-into-a-coarse-grained-one">2. Convert the all-atom trajectory into a coarse-grained one</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#construct-a-noise-distribution-and-generate-noise-samples">3. Construct a noise distribution and generate noise samples</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="fold-the-mini-protein-chignolin">
+<span id="chignolin"></span><h1>Fold the mini-protein, chignolin<a class="headerlink" href="#fold-the-mini-protein-chignolin" title="Link to this heading">#</a></h1>
+<a class="reference internal image-reference" href="../../examples/chignolin/data/2RVD.png"><img alt="folded structure of the chignolin protein" src="../../examples/chignolin/data/2RVD.png" style="width: 200px;" />
+</a>
+<p>Chignolin is an artificial mini-protein consisting of only 10 amino acid residues.
+Here we use potential contrasting to learn a coarse-grained force field that can
+capture the protein’s folding and unfolding</p>
+<section id="download-the-all-atom-simulation-trajectory">
+<h2>1. Download the all-atom simulation trajectory<a class="headerlink" href="#download-the-all-atom-simulation-trajectory" title="Link to this heading">#</a></h2>
+<p>An all-atom simulation of chignolin is used as training data.
+You can follow the link <a class="reference external" href="https://www.kaggle.com/datasets/negelis/pccg-chignolin">pccg-chignolin</a>
+to download the all-atom simulation trajectory.
+Then you should uncompress the downloaded data and move them to the directory <code class="docutils literal notranslate"><span class="pre">WORK_DIR/data</span></code>.
+Here <code class="docutils literal notranslate"><span class="pre">WORK_DIR</span></code> can be any directory and wil be used as the working directory for running commands
+in the tutorial.
+In other words, you should change your working directory to <code class="docutils literal notranslate"><span class="pre">WORK_DIR</span></code> before running following commands.
+In the direcotry <code class="docutils literal notranslate"><span class="pre">WORK_DIR/data</span></code>, there should be three files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cln025_all_atom.dcd</span></code>: an all-atom simulation trajectory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cln025.prmtop</span></code>: the topology file of chignolin</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cln025_reference.pdb</span></code>: a folded conformation of chignolin</p></li>
+</ul>
+<p>The all-atom simulation was conducted with implicit solvent and near the folding temperature,
+so the all-atom simulation trajectory contains both folded and unfolded conformations.
+You can visualize the trajectory by loading it together with the topology file into softwares such as <code class="docutils literal notranslate"><span class="pre">VMD</span></code>.</p>
+</section>
+<section id="convert-the-all-atom-trajectory-into-a-coarse-grained-one">
+<h2>2. Convert the all-atom trajectory into a coarse-grained one<a class="headerlink" href="#convert-the-all-atom-trajectory-into-a-coarse-grained-one" title="Link to this heading">#</a></h2>
+<p>First we need to choose a coarse-grained representation for the force field.
+Here we choose to represent each amino acid residue with just one particle
+fixed at the residue’s <span class="math notranslate nohighlight">\(\alpha\)</span> carbon atom postion.
+With this coarse-grained representation, let us convert the all-atom trajectory
+into a coarse-grained one, which will be used as training data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mdtraj</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optimize</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.cluster.hierarchy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial.distance</span><span class="w"> </span><span class="kn">import</span> <span class="n">squareform</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openmm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openmm.unit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">unit</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openmm.app</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ommapp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="kn">import</span> <span class="n">exit</span>
+
+<span class="c1">#### convert the all atom trajectory into a coarse-grained one</span>
+<span class="n">top_aa</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_prmtop</span><span class="p">(</span><span class="s1">&#39;./data/cln025_all_atom.prmtop&#39;</span><span class="p">)</span>
+<span class="n">traj_aa</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_dcd</span><span class="p">(</span><span class="s1">&#39;./data/cln025_all_atom.dcd&#39;</span><span class="p">,</span> <span class="n">top_aa</span><span class="p">,</span> <span class="n">stride</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">alpha_carbon_atom_indices</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">top_aa</span><span class="o">.</span><span class="n">atoms</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">atom</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;CA&#39;</span><span class="p">:</span>
+        <span class="n">alpha_carbon_atom_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">traj_cg</span> <span class="o">=</span> <span class="n">traj_aa</span><span class="o">.</span><span class="n">atom_slice</span><span class="p">(</span><span class="n">alpha_carbon_atom_indices</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">,</span> <span class="n">exist_ok</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">traj_cg</span><span class="o">.</span><span class="n">save_dcd</span><span class="p">(</span><span class="s1">&#39;./output/cln025_cg.dcd&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can visualize the coarse-grained trajectory by projecting conformations into
+a low dimensional space spanned by collective variables such as the
+RMSD (root-mean-squared-distance) with respect to the folded conformations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">top_cg</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_psf</span><span class="p">(</span><span class="s1">&#39;./data/cln025_cg.psf&#39;</span><span class="p">)</span>
+<span class="n">traj_cg</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_dcd</span><span class="p">(</span><span class="s1">&#39;./output/cln025_cg.dcd&#39;</span><span class="p">,</span> <span class="n">top_cg</span><span class="p">)</span>
+
+<span class="n">ref_pdb</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_pdb</span><span class="p">(</span><span class="s1">&#39;./data/cln025_reference.pdb&#39;</span><span class="p">)</span>
+<span class="n">ref_pdb</span> <span class="o">=</span> <span class="n">ref_pdb</span><span class="o">.</span><span class="n">atom_slice</span><span class="p">(</span><span class="n">alpha_carbon_atom_indices</span><span class="p">)</span>
+<span class="n">ref_traj</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">Trajectory</span><span class="p">(</span><span class="n">ref_pdb</span><span class="o">.</span><span class="n">xyz</span><span class="p">,</span> <span class="n">topology</span> <span class="o">=</span> <span class="n">top_cg</span><span class="p">)</span>
+<span class="n">rmsd</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">rmsd</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="n">ref_traj</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">rmsd</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;All atom&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;RMSD (nm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probablity density&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./output/rmsd_hist_all_atom.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../examples/chignolin/output/rmsd_hist_all_atom.png"><img alt="../../examples/chignolin/output/rmsd_hist_all_atom.png" src="../../examples/chignolin/output/rmsd_hist_all_atom.png" style="width: 400px;" />
+</a>
+</section>
+<section id="construct-a-noise-distribution-and-generate-noise-samples">
+<h2>3. Construct a noise distribution and generate noise samples<a class="headerlink" href="#construct-a-noise-distribution-and-generate-noise-samples" title="Link to this heading">#</a></h2>
+<p>In potential contrasting, we construct the noise distribution
+by learning an energy function and use the corresponding
+Boltzmann distribution as the noise distribution.
+Here we use an energy function that includes
+terms for bonds, angles, and dihedrals defined as</p>
+<div class="math notranslate nohighlight">
+\[u_\mathrm{bonded}(b, a, d) = \sum_{i=1}^{L-1} \frac{1}{2}k_i (b_i - b_i^\circ)^2 + \sum_{i=1}^{L-2} S_\mathrm{angle}(a_i; \boldsymbol{c}^a_i) + \sum_{i=1}^{L-3} S_\mathrm{dihedral}(d_i; \boldsymbol{c}^d_i),\]</div>
+<p>where <span class="math notranslate nohighlight">\(L = 10\)</span> is the number of residues in the protein, and <span class="math notranslate nohighlight">\(b_i, a_i\)</span>, and <span class="math notranslate nohighlight">\(d_i\)</span> represent the <span class="math notranslate nohighlight">\(i\)</span> th bond, angle, and dihedral angle, respectively. A quadratic function is used for energies on bonds. <span class="math notranslate nohighlight">\(k_i\)</span> and <span class="math notranslate nohighlight">\(b_i^\circ\)</span> are the force constant and the equilibrium value for the <span class="math notranslate nohighlight">\(i\)</span> th bond, respectively. Cubic spline functions, <span class="math notranslate nohighlight">\(S_\mathrm{angle}\)</span> and <span class="math notranslate nohighlight">\(S_\mathrm{dihedral}\)</span>, are used for energies on angles and dihedral angles. <span class="math notranslate nohighlight">\(\boldsymbol{c}^a_i\)</span> and  <span class="math notranslate nohighlight">\(\boldsymbol{c}^d_i\)</span> are spline coefficients for the <span class="math notranslate nohighlight">\(i\)</span> th angle and dihedral angle, respectively.</p>
+<p>Because individual energy terms in <span class="math notranslate nohighlight">\(u_\mathrm{bonded}(b, a, d)\)</span> are separable, we can fit their paramters independently such that each energy term will reproduce the marginal distribution of the corresponding internal coordinate.
+For bond paramters, we can estimate them directly using the mean and the variance of bond length distributions.
+For angle and dihedral parameters, we use the noise contrastive estimation with uniform distributions as the noise distribution.
+We note that the unit of energy in <span class="math notranslate nohighlight">\(u_\mathrm{bonded}(b, a, d)\)</span> is <span class="math notranslate nohighlight">\(kT\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_atoms</span> <span class="o">=</span> <span class="n">top_cg</span><span class="o">.</span><span class="n">n_atoms</span>
+<span class="n">bonded_terms</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;bond&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;indices&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)])},</span>
+    <span class="s1">&#39;angle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;indices&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)])},</span>
+    <span class="s1">&#39;dihedral&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;indices&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)])}</span>
+<span class="p">}</span>
+
+<span class="c1">#### fit parameters for bonds</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;b0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;kb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">atom_pair</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_distances</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="n">atom_pairs</span> <span class="o">=</span> <span class="p">[</span><span class="n">atom_pair</span><span class="p">])</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;b0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dist</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;kb&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">dist</span><span class="o">.</span><span class="n">var</span><span class="p">())</span>
+
+<span class="c1">#### fit parameters for angles</span>
+<span class="n">angle_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">10</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">angle_boundary_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">])</span>
+
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;basis_grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;theta&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;energy_grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">angle_atom_indices</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">angle_data</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_angles</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="p">[</span><span class="n">angle_atom_indices</span><span class="p">])</span>
+    <span class="n">angle_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">angle_data</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="n">angle_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">angle_data</span><span class="p">)</span>
+    <span class="n">angle_data</span><span class="o">.</span><span class="n">clamp_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+    <span class="n">angle_noise</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">angle_data</span><span class="p">))</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+
+    <span class="n">basis_data</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">spline</span><span class="o">.</span><span class="n">bs</span><span class="p">(</span><span class="n">angle_data</span><span class="p">,</span> <span class="n">angle_knots</span><span class="p">,</span> <span class="n">angle_boundary_knots</span><span class="p">)</span>
+    <span class="n">basis_noise</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">spline</span><span class="o">.</span><span class="n">bs</span><span class="p">(</span><span class="n">angle_noise</span><span class="p">,</span> <span class="n">angle_knots</span><span class="p">,</span> <span class="n">angle_boundary_knots</span><span class="p">)</span>
+
+    <span class="n">log_q_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">angle_data</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">log_q_noise</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">angle_noise</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+    <span class="n">theta</span><span class="p">,</span> <span class="n">dF</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">NCE</span><span class="p">(</span><span class="n">log_q_noise</span><span class="p">,</span> <span class="n">log_q_data</span><span class="p">,</span>
+                       <span class="n">basis_noise</span><span class="p">,</span> <span class="n">basis_data</span><span class="p">,</span>
+                       <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">angle_grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">basis_grid</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">spline</span><span class="o">.</span><span class="n">bs</span><span class="p">(</span><span class="n">angle_grid</span><span class="p">,</span> <span class="n">angle_knots</span><span class="p">,</span> <span class="n">angle_boundary_knots</span><span class="p">)</span>
+    <span class="n">energy_grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">basis_grid</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;grid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">angle_grid</span><span class="p">)</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;basis_grid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">basis_grid</span><span class="p">)</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;theta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;energy_grid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">energy_grid</span><span class="p">)</span>
+
+<span class="c1">#### fit parameters for dihedrals</span>
+<span class="n">dihedral_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">12</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">dihedral_boundary_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">])</span>
+
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;basis_grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;theta&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;energy_grid&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">dihedral_atom_indices</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">dihedral_data</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_dihedrals</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="p">[</span><span class="n">dihedral_atom_indices</span><span class="p">])</span>
+    <span class="n">dihedral_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">dihedral_data</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="n">dihedral_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">dihedral_data</span><span class="p">)</span>
+    <span class="n">dihedral_data</span><span class="o">.</span><span class="n">clamp_</span><span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+    <span class="n">dihedral_noise</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">distributions</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">dihedral_data</span><span class="p">),))</span>
+
+    <span class="n">basis_data</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">spline</span><span class="o">.</span><span class="n">pbs</span><span class="p">(</span><span class="n">dihedral_data</span><span class="p">,</span> <span class="n">dihedral_knots</span><span class="p">,</span> <span class="n">dihedral_boundary_knots</span><span class="p">)</span>
+    <span class="n">basis_noise</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">spline</span><span class="o">.</span><span class="n">pbs</span><span class="p">(</span><span class="n">dihedral_noise</span><span class="p">,</span> <span class="n">dihedral_knots</span><span class="p">,</span> <span class="n">dihedral_boundary_knots</span><span class="p">)</span>
+
+    <span class="n">log_q_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">dihedral_data</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+    <span class="n">log_q_noise</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">dihedral_noise</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+
+    <span class="n">theta</span><span class="p">,</span> <span class="n">dF</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">NCE</span><span class="p">(</span><span class="n">log_q_noise</span><span class="p">,</span> <span class="n">log_q_data</span><span class="p">,</span>
+                       <span class="n">basis_noise</span><span class="p">,</span> <span class="n">basis_data</span><span class="p">,</span>
+                       <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">dihedral_grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">basis_grid</span> <span class="o">=</span> <span class="n">pccg</span><span class="o">.</span><span class="n">spline</span><span class="o">.</span><span class="n">pbs</span><span class="p">(</span><span class="n">dihedral_grid</span><span class="p">,</span> <span class="n">dihedral_knots</span><span class="p">,</span> <span class="n">dihedral_boundary_knots</span><span class="p">)</span>
+    <span class="n">energy_grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">basis_grid</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;grid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dihedral_grid</span><span class="p">)</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;basis_grid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">basis_grid</span><span class="p">)</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;theta&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;energy_grid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">energy_grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The energy function <span class="math notranslate nohighlight">\(u_\mathrm{bonded}(b, a, d)\)</span>
+defines a Boltzmann distribution on internal coordinates <span class="math notranslate nohighlight">\(p(b, a, d) \propto \exp(-u_\mathrm{bonded}(b, a, d))\)</span>.
+We generate noise samples from the Boltzmann distribution by running molecular dynamics using <a class="reference external" href="https://openmm.org">OpenMM</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#### make an openmm system with bonded parameters</span>
+<span class="c1">#### add particles</span>
+<span class="n">aa_mass</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ALA&#39;</span><span class="p">:</span> <span class="mf">71.08</span><span class="p">,</span> <span class="s1">&#39;ARG&#39;</span><span class="p">:</span> <span class="mf">156.2</span><span class="p">,</span> <span class="s1">&#39;ASN&#39;</span><span class="p">:</span> <span class="mf">114.1</span><span class="p">,</span> <span class="s1">&#39;ASP&#39;</span><span class="p">:</span> <span class="mf">115.1</span><span class="p">,</span>
+           <span class="s1">&#39;CYS&#39;</span><span class="p">:</span> <span class="mf">103.1</span><span class="p">,</span> <span class="s1">&#39;GLN&#39;</span><span class="p">:</span> <span class="mf">128.1</span><span class="p">,</span> <span class="s1">&#39;GLU&#39;</span><span class="p">:</span> <span class="mf">129.1</span><span class="p">,</span> <span class="s1">&#39;GLY&#39;</span><span class="p">:</span> <span class="mf">57.05</span><span class="p">,</span>
+           <span class="s1">&#39;HIS&#39;</span><span class="p">:</span> <span class="mf">137.1</span><span class="p">,</span> <span class="s1">&#39;ILE&#39;</span><span class="p">:</span> <span class="mf">113.2</span><span class="p">,</span> <span class="s1">&#39;LEU&#39;</span><span class="p">:</span> <span class="mf">113.2</span><span class="p">,</span> <span class="s1">&#39;LYS&#39;</span><span class="p">:</span> <span class="mf">128.2</span><span class="p">,</span>
+           <span class="s1">&#39;MET&#39;</span><span class="p">:</span> <span class="mf">131.2</span><span class="p">,</span> <span class="s1">&#39;PHE&#39;</span><span class="p">:</span> <span class="mf">147.2</span><span class="p">,</span> <span class="s1">&#39;PRO&#39;</span><span class="p">:</span> <span class="mf">97.12</span><span class="p">,</span> <span class="s1">&#39;SER&#39;</span><span class="p">:</span> <span class="mf">87.08</span><span class="p">,</span>
+           <span class="s1">&#39;THR&#39;</span><span class="p">:</span> <span class="mf">101.1</span><span class="p">,</span> <span class="s1">&#39;TRP&#39;</span><span class="p">:</span> <span class="mf">186.2</span><span class="p">,</span> <span class="s1">&#39;TYR&#39;</span><span class="p">:</span> <span class="mf">163.2</span><span class="p">,</span> <span class="s1">&#39;VAL&#39;</span><span class="p">:</span> <span class="mf">99.07</span><span class="p">}</span>
+
+<span class="n">sys_im</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">System</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">top_cg</span><span class="o">.</span><span class="n">residues</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">aa_mass</span><span class="p">[</span><span class="n">res</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+    <span class="n">sys_im</span><span class="o">.</span><span class="n">addParticle</span><span class="p">(</span><span class="n">aa_mass</span><span class="p">[</span><span class="n">res</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">BOLTZMANN_CONSTANT_kB</span><span class="o">*</span><span class="n">unit</span><span class="o">.</span><span class="n">AVOGADRO_CONSTANT_NA</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mf">360.47</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">kelvin</span>
+<span class="n">kT</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">value_in_unit</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">kilojoule_per_mole</span><span class="p">)</span>
+
+<span class="c1">#### add bond force</span>
+<span class="n">bond_force</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">CustomBondForce</span><span class="p">(</span><span class="s2">&quot;(0.5*kb*(r - b0)^2 + 2*log(r))*kT&quot;</span><span class="p">)</span>
+<span class="n">bond_force</span><span class="o">.</span><span class="n">addGlobalParameter</span><span class="p">(</span><span class="s1">&#39;kT&#39;</span><span class="p">,</span> <span class="n">kT</span><span class="p">)</span>
+<span class="n">bond_force</span><span class="o">.</span><span class="n">addPerBondParameter</span><span class="p">(</span><span class="s1">&#39;b0&#39;</span><span class="p">)</span>
+<span class="n">bond_force</span><span class="o">.</span><span class="n">addPerBondParameter</span><span class="p">(</span><span class="s1">&#39;kb&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">p1</span><span class="p">,</span><span class="n">p2</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">b0</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;b0&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">kb</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;kb&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">bond_force</span><span class="o">.</span><span class="n">addBond</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span> <span class="p">[</span><span class="n">b0</span><span class="p">,</span> <span class="n">kb</span><span class="p">,</span> <span class="n">alpha</span><span class="p">])</span>
+<span class="n">bond_force</span><span class="o">.</span><span class="n">setForceGroup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">sys_im</span><span class="o">.</span><span class="n">addForce</span><span class="p">(</span><span class="n">bond_force</span><span class="p">)</span>
+
+<span class="c1">#### add angle force</span>
+<span class="n">ua</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;energy_grid&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+<span class="n">func</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">Continuous2DFunction</span><span class="p">(</span><span class="n">xsize</span> <span class="o">=</span> <span class="n">ua</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                   <span class="n">ysize</span> <span class="o">=</span> <span class="n">ua</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                   <span class="n">values</span> <span class="o">=</span> <span class="n">ua</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span><span class="p">),</span>
+                                   <span class="n">xmin</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ua</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+                                   <span class="n">ymin</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span>
+                                   <span class="n">periodic</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">angle_force</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">CustomCompoundBondForce</span><span class="p">(</span>
+    <span class="mi">3</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;(ua(idx, angle(p1, p2, p3)) + log(sin(pi - angle(p1, p2, p3))) )*kT&quot;</span>
+<span class="p">)</span>
+<span class="n">angle_force</span><span class="o">.</span><span class="n">addGlobalParameter</span><span class="p">(</span><span class="s1">&#39;pi&#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">angle_force</span><span class="o">.</span><span class="n">addGlobalParameter</span><span class="p">(</span><span class="s1">&#39;kT&#39;</span><span class="p">,</span> <span class="n">kT</span><span class="p">)</span>
+<span class="n">angle_force</span><span class="o">.</span><span class="n">addTabulatedFunction</span><span class="p">(</span><span class="s2">&quot;ua&quot;</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+<span class="n">angle_force</span><span class="o">.</span><span class="n">addPerBondParameter</span><span class="p">(</span><span class="s1">&#39;idx&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">angle_force</span><span class="o">.</span><span class="n">addBond</span><span class="p">([</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">],</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">alpha</span><span class="p">])</span>
+<span class="n">angle_force</span><span class="o">.</span><span class="n">setForceGroup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">sys_im</span><span class="o">.</span><span class="n">addForce</span><span class="p">(</span><span class="n">angle_force</span><span class="p">)</span>
+
+<span class="c1">#### add dihedral force</span>
+<span class="n">ud</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;energy_grid&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+<span class="n">ud</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">ud</span><span class="p">,</span> <span class="n">ud</span><span class="p">[[</span><span class="mi">0</span><span class="p">]]])</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="n">ud</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">ud</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">ud</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+<span class="n">ud</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+<span class="n">func</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">Continuous2DFunction</span><span class="p">(</span><span class="n">xsize</span> <span class="o">=</span> <span class="n">ud</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                   <span class="n">ysize</span> <span class="o">=</span> <span class="n">ud</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                   <span class="n">values</span> <span class="o">=</span> <span class="n">ud</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span><span class="p">),</span>
+                                   <span class="n">xmin</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ud</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+                                   <span class="n">ymin</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span>
+                                   <span class="n">periodic</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">dihedral_force</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">CustomCompoundBondForce</span><span class="p">(</span>
+    <span class="mi">4</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;ud(idx, dihedral(p1, p2, p3, p4))*kT&quot;</span>
+<span class="p">)</span>
+<span class="n">dihedral_force</span><span class="o">.</span><span class="n">addGlobalParameter</span><span class="p">(</span><span class="s1">&#39;kT&#39;</span><span class="p">,</span> <span class="n">kT</span><span class="p">)</span>
+<span class="n">dihedral_force</span><span class="o">.</span><span class="n">addTabulatedFunction</span><span class="p">(</span><span class="s2">&quot;ud&quot;</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+<span class="n">dihedral_force</span><span class="o">.</span><span class="n">addPerBondParameter</span><span class="p">(</span><span class="s1">&#39;idx&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">p4</span> <span class="o">=</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">dihedral_force</span><span class="o">.</span><span class="n">addBond</span><span class="p">([</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="p">],</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">k</span><span class="p">)])</span>
+<span class="n">dihedral_force</span><span class="o">.</span><span class="n">setForceGroup</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">sys_im</span><span class="o">.</span><span class="n">addForce</span><span class="p">(</span><span class="n">dihedral_force</span><span class="p">)</span>
+
+<span class="n">sys_im</span><span class="o">.</span><span class="n">addForce</span><span class="p">(</span><span class="n">openmm</span><span class="o">.</span><span class="n">CMMotionRemover</span><span class="p">())</span>
+
+<span class="c1">#### run simulation with the system that only contains</span>
+<span class="c1">#### bonded interaction energy terms</span>
+<span class="n">fricCoef</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">unit</span><span class="o">.</span><span class="n">picoseconds</span>
+<span class="n">stepsize</span> <span class="o">=</span> <span class="mf">5.</span> <span class="o">*</span> <span class="n">unit</span><span class="o">.</span><span class="n">femtoseconds</span>
+<span class="n">integrator</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">LangevinMiddleIntegrator</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">fricCoef</span><span class="p">,</span> <span class="n">stepsize</span><span class="p">)</span>
+
+<span class="n">pdb</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_pdb</span><span class="p">(</span><span class="s1">&#39;./data/cln025_reference.pdb&#39;</span><span class="p">)</span>
+<span class="n">pdb</span> <span class="o">=</span> <span class="n">pdb</span><span class="o">.</span><span class="n">atom_slice</span><span class="p">(</span><span class="n">alpha_carbon_atom_indices</span><span class="p">)</span>
+<span class="n">xyz_init</span> <span class="o">=</span> <span class="n">pdb</span><span class="o">.</span><span class="n">xyz</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">platform</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">Platform</span><span class="o">.</span><span class="n">getPlatformByName</span><span class="p">(</span><span class="s1">&#39;Reference&#39;</span><span class="p">)</span>
+<span class="n">context</span> <span class="o">=</span> <span class="n">openmm</span><span class="o">.</span><span class="n">Context</span><span class="p">(</span><span class="n">sys_im</span><span class="p">,</span> <span class="n">integrator</span><span class="p">,</span> <span class="n">platform</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">setPositions</span><span class="p">(</span><span class="n">xyz_init</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./output/&quot;</span><span class="p">,</span> <span class="n">exist_ok</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./output/traj_im.dcd&quot;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+<span class="n">dcd_file</span> <span class="o">=</span> <span class="n">ommapp</span><span class="o">.</span><span class="n">DCDFile</span><span class="p">(</span><span class="n">file_handle</span><span class="p">,</span> <span class="n">top_cg</span><span class="o">.</span><span class="n">to_openmm</span><span class="p">(),</span> <span class="n">dt</span> <span class="o">=</span> <span class="mi">200</span><span class="o">*</span><span class="n">unit</span><span class="o">.</span><span class="n">femtoseconds</span><span class="p">)</span>
+
+<span class="n">num_frames</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">traj_aa</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_frames</span><span class="p">):</span>
+    <span class="n">integrator</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">getState</span><span class="p">(</span><span class="n">getPositions</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">getPositions</span><span class="p">()</span>
+    <span class="n">dcd_file</span><span class="o">.</span><span class="n">writeModel</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">flush</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">file_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When defining the energy function <span class="math notranslate nohighlight">\(u_\mathrm{bonded}(b, a, d)\)</span> in <code class="docutils literal notranslate"><span class="pre">OpenMM</span></code>, we added extra energy terms for bonds and angles (e.g. <span class="math notranslate nohighlight">\(\log(r)\)</span> for bonds and <span class="math notranslate nohighlight">\(\log(\sin(\pi - \mathrm{angle}(p1, p2, p3)))\)</span> for angles). This is because of the Jacobian factor for transformation between Cartesian coordiantes and internal coordinates.</p>
+</div>
+<p>We can compare distributions of internal coordinates between data (the all-atom simulation) and noise samples to make sure our noise energy function is defined correctly in <code class="docutils literal notranslate"><span class="pre">OpenMM</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#### compare traj_im and traj_cg</span>
+<span class="n">bond_cg</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_distances</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">])</span>
+<span class="n">angle_cg</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_angles</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">])</span>
+<span class="n">dihedral_cg</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_dihedrals</span><span class="p">(</span><span class="n">traj_cg</span><span class="p">,</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">])</span>
+
+<span class="n">traj_im</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">load_dcd</span><span class="p">(</span><span class="s1">&#39;./output/traj_im.dcd&#39;</span><span class="p">,</span> <span class="n">top_cg</span><span class="p">)</span>
+<span class="n">bond_im</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_distances</span><span class="p">(</span><span class="n">traj_im</span><span class="p">,</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;bond&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">])</span>
+<span class="n">angle_im</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_angles</span><span class="p">(</span><span class="n">traj_im</span><span class="p">,</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">])</span>
+<span class="n">dihedral_im</span> <span class="o">=</span> <span class="n">mdtraj</span><span class="o">.</span><span class="n">compute_dihedrals</span><span class="p">(</span><span class="n">traj_im</span><span class="p">,</span> <span class="n">bonded_terms</span><span class="p">[</span><span class="s1">&#39;dihedral&#39;</span><span class="p">][</span><span class="s1">&#39;indices&#39;</span><span class="p">])</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mf">6.4</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="mf">4.8</span><span class="o">*</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+<span class="n">idx_plot</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">bond_cg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">idx_plot</span><span class="p">)</span>
+    <span class="n">bond_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">bond_cg</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">bond_im</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="n">bond_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">bond_cg</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">bond_im</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bond_cg</span><span class="p">[:,</span><span class="n">j</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="n">bond_min</span><span class="p">,</span> <span class="n">bond_max</span><span class="p">),</span>
+             <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;All atom&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bond_im</span><span class="p">[:,</span><span class="n">j</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="n">bond_min</span><span class="p">,</span> <span class="n">bond_max</span><span class="p">),</span>
+             <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;CG_im&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Bond </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">idx_plot</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">angle_cg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">idx_plot</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">angle_cg</span><span class="p">[:,</span><span class="n">j</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">),</span>
+             <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;All atom&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">angle_im</span><span class="p">[:,</span><span class="n">j</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">),</span>
+             <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;CG_im&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Angle </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">idx_plot</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dihedral_cg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">idx_plot</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dihedral_cg</span><span class="p">[:,</span><span class="n">j</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">),</span>
+             <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;All atom&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">dihedral_im</span><span class="p">[:,</span><span class="n">j</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">),</span>
+             <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;CG_im&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Dihedral </span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">2</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">idx_plot</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;./output/bad_hist_im.pdf&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../examples/chignolin/output/bad_hist_im.png" src="../../examples/chignolin/output/bad_hist_im.png" />
+<p>From the above plot, we see that the coarse-grained energy
+function with just bonded terms reproduces the marginal distribution
+of every internal coordinate. However, reproducing marginal distributions
+does not guarantee that the energy function reproduces the conformational
+ensemble. One way to see that is comparing the distribution of RMSD between
+data and noise samples, as shown below.</p>
+<img alt="../../examples/chignolin/output/rmsd_hist_aa_vs_im.png" src="../../examples/chignolin/output/rmsd_hist_aa_vs_im.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-all-atom-simulation-trajectory">1. Download the all-atom simulation trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-the-all-atom-trajectory-into-a-coarse-grained-one">2. Convert the all-atom trajectory into a coarse-grained one</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#construct-a-noise-distribution-and-generate-noise-samples">3. Construct a noise distribution and generate noise samples</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Xinqiang Ding; Bin Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Xinqiang Ding; Bin Zhang.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

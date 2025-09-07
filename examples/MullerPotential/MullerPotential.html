@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Müller Potential Tutorial &#8212; Potential Contrasting documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/MullerPotential/MullerPotential';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="API" href="../../API.html" />
+    <link rel="prev" title="Examples" href="../../examples.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Potential Contrasting documentation - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Potential Contrasting documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get Started</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../examples.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Müller Potential Tutorial</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../API.html">API</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/ZhangGroup-MITChemistry/PCCG" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/examples/MullerPotential/MullerPotential.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Müller Potential Tutorial</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-1:-Import-Required-Libraries">Step 1: Import Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-2:-Müller-Potential-Definition">Step 2: Müller Potential Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-3:-Implementation-of-the-Müller-Potential">Step 3: Implementation of the Müller Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-4:-Grid-Generation-Helper-Function">Step 4: Grid Generation Helper Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-5:-Set-Parameters-and-Domain">Step 5: Set Parameters and Domain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-6:-Visualize-the-True-Müller-Potential">Step 6: Visualize the True Müller Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-7:-Generate-Training-Data-using-Parallel-Tempering">Step 7: Generate Training Data using Parallel Tempering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-8:-Visualize-the-Generated-Samples">Step 8: Visualize the Generated Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-9:-Prepare-Data-for-Contrastive-Learning">Step 9: Prepare Data for Contrastive Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-10:-Learn-the-Potential-using-Contrastive-Learning">Step 10: Learn the Potential using Contrastive Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="Müller-Potential-Tutorial">
+<h1>Müller Potential Tutorial<a class="headerlink" href="#Müller-Potential-Tutorial" title="Link to this heading">#</a></h1>
+<p>This tutorial demonstrates how to use the PCCG library to learn complex energy landscapes through contrastive learning. We’ll work with the famous Müller potential, which is commonly used as a benchmark in molecular dynamics and sampling methods.</p>
+<section id="Step-1:-Import-Required-Libraries">
+<h2>Step 1: Import Required Libraries<a class="headerlink" href="#Step-1:-Import-Required-Libraries" title="Link to this heading">#</a></h2>
+<p>First, let’s import all the necessary libraries:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributions</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">distributions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pccg.splines</span><span class="w"> </span><span class="kn">import</span> <span class="n">bs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pccg.CL</span><span class="w"> </span><span class="kn">import</span> <span class="n">contrastive_learning</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">set_default_dtype</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Step-2:-Müller-Potential-Definition">
+<h2>Step 2: Müller Potential Definition<a class="headerlink" href="#Step-2:-Müller-Potential-Definition" title="Link to this heading">#</a></h2>
+<p>The Müller potential is defined as</p>
+<p><span class="math">\begin{equation*}
+U(x, y; \alpha) = \alpha \cdot \sum_{i=1}^{4}{A_i \cdot \exp( \left[ a_i \cdot (x-x^0_i)^2 + b_i \cdot (x-x^0_i)(y-y^0_i) + c_i \cdot (y-y^0_i)^2 \right] )}
+\end{equation*}</span></p>
+<p>where <span class="math notranslate nohighlight">\((A_1, A_2, A_3, A_4)\)</span> = (-200, -100, -170, 15), <span class="math notranslate nohighlight">\((a_1, a_2, a_3, a_4)\)</span> = (-1, -1, -6.5, 0.7), <span class="math notranslate nohighlight">\((b_1, b_2, b_3, b_4)\)</span> = (0, 0, 11, 0.6),<span class="math notranslate nohighlight">\((c_1, c_2, c_3, c_4)\)</span> = (-10, -10, -6.5, 0.7), <span class="math notranslate nohighlight">\((x^0_1, x^0_2, x^0_3, x^0_4)\)</span> = (1, 0, -0.5, -1), and <span class="math notranslate nohighlight">\((y^0_1, y^0_2, y^0_3, y^0_4)\)</span> = (0, 0.5, 1.5, 1).</p>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter that control the rugedness of the potential. In this tutorial, we will set it to 0.05.</p>
+</section>
+<section id="Step-3:-Implementation-of-the-Müller-Potential">
+<h2>Step 3: Implementation of the Müller Potential<a class="headerlink" href="#Step-3:-Implementation-of-the-Müller-Potential" title="Link to this heading">#</a></h2>
+<p>Now let’s implement the Müller potential function. This function computes the potential energy at any given point (x,y) in 2D space:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_Muller_potential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">200.</span><span class="p">,</span> <span class="o">-</span><span class="mf">100.</span><span class="p">,</span> <span class="o">-</span><span class="mf">170.</span><span class="p">,</span> <span class="mf">15.</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">ac</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">10.0</span><span class="p">]),</span>
+          <span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">10.0</span><span class="p">]),</span>
+          <span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">6.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">6.5</span><span class="p">]),</span>
+          <span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">]))</span>
+
+    <span class="n">x0</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]),</span>
+          <span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]),</span>
+          <span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]),</span>
+          <span class="n">x</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]))</span>
+
+    <span class="n">U</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">U</span> <span class="o">=</span> <span class="n">U</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">diff</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">torch</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">U</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">U</span>
+    <span class="k">return</span> <span class="n">U</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Step-4:-Grid-Generation-Helper-Function">
+<h2>Step 4: Grid Generation Helper Function<a class="headerlink" href="#Step-4:-Grid-Generation-Helper-Function" title="Link to this heading">#</a></h2>
+<p>To visualize the potential surface, we need to create a grid of points over our domain of interest:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_grid</span><span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">grid_x1</span><span class="p">,</span> <span class="n">grid_x2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="s2">&quot;ij&quot;</span><span class="p">)</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">grid_x1</span><span class="p">,</span> <span class="n">grid_x2</span><span class="p">],</span> <span class="n">dim</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Step-5:-Set-Parameters-and-Domain">
+<h2>Step 5: Set Parameters and Domain<a class="headerlink" href="#Step-5:-Set-Parameters-and-Domain" title="Link to this heading">#</a></h2>
+<p>Let’s define our simulation parameters and the spatial domain we’ll work with:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.0</span>
+<span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Step-6:-Visualize-the-True-Müller-Potential">
+<h2>Step 6: Visualize the True Müller Potential<a class="headerlink" href="#Step-6:-Visualize-the-True-Müller-Potential" title="Link to this heading">#</a></h2>
+<p>Let’s create a contour plot to visualize the true Müller potential energy surface:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">generate_grid</span><span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">compute_Muller_potential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">U</span><span class="p">[</span><span class="n">U</span><span class="o">&gt;</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">U</span><span class="o">.</span><span class="n">T</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">extent</span> <span class="o">=</span> <span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">),</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">viridis_r</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">left</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">labelleft</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/examples_MullerPotential_MullerPotential_9_0.png" src="../../_images/examples_MullerPotential_MullerPotential_9_0.png" />
+</div>
+</div>
+</section>
+<section id="Step-7:-Generate-Training-Data-using-Parallel-Tempering">
+<h2>Step 7: Generate Training Data using Parallel Tempering<a class="headerlink" href="#Step-7:-Generate-Training-Data-using-Parallel-Tempering" title="Link to this heading">#</a></h2>
+<p>To train our model, we need sample data from the Boltzmann distribution of the Müller potential. We’ll use parallel tempering (replica exchange) Monte Carlo sampling to efficiently explore the complex energy landscape:</p>
+<ul class="simple">
+<li><p><strong>Parallel tempering</strong>: We run multiple replicas at different temperatures (controlled by α values)</p></li>
+<li><p><strong>Replica exchange</strong>: Periodically swap configurations between adjacent temperature levels</p></li>
+<li><p><strong>Benefits</strong>: This helps the system escape local minima and sample from the full distribution</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_reps</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">alphas</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">num_reps</span><span class="p">)</span>
+
+<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">510000</span>
+<span class="n">x_record</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">accept_rate</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">x1_min</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">num_reps</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x1_max</span> <span class="o">-</span> <span class="n">x1_min</span><span class="p">),</span>
+                 <span class="n">x2_min</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">num_reps</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x2_max</span> <span class="o">-</span> <span class="n">x2_min</span><span class="p">)),</span>
+                <span class="n">dim</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="n">compute_Muller_potential</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">100000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;idx of steps: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+
+    <span class="c1">## sampling within each replica</span>
+    <span class="n">delta_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="n">num_reps</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="mf">0.3</span>
+    <span class="n">x_p</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">delta_x</span>
+    <span class="n">energy_p</span> <span class="o">=</span> <span class="n">compute_Muller_potential</span><span class="p">(</span><span class="n">x_p</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="c1">## accept based on energy</span>
+    <span class="n">accept_prop</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">alphas</span><span class="o">*</span><span class="p">(</span><span class="n">energy_p</span> <span class="o">-</span> <span class="n">energy</span><span class="p">))</span>
+    <span class="n">accept_flag</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">num_reps</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">accept_prop</span>
+
+    <span class="c1">## considering the bounding effects</span>
+    <span class="n">accept_flag</span> <span class="o">=</span> <span class="n">accept_flag</span> <span class="o">&amp;</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x_p</span> <span class="o">&gt;</span> <span class="n">x_p</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">]),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> \
+                              <span class="o">&amp;</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x_p</span> <span class="o">&lt;</span> <span class="n">x_p</span><span class="o">.</span><span class="n">new_tensor</span><span class="p">([</span><span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">]),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">x_p</span><span class="p">[</span><span class="o">~</span><span class="n">accept_flag</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="o">~</span><span class="n">accept_flag</span><span class="p">]</span>
+    <span class="n">energy_p</span><span class="p">[</span><span class="o">~</span><span class="n">accept_flag</span><span class="p">]</span> <span class="o">=</span> <span class="n">energy</span><span class="p">[</span><span class="o">~</span><span class="n">accept_flag</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x_p</span>
+    <span class="n">energy</span> <span class="o">=</span> <span class="n">energy_p</span>
+
+    <span class="c1">## calculate overall accept rate</span>
+    <span class="n">accept_rate</span> <span class="o">=</span> <span class="n">accept_rate</span> <span class="o">+</span> <span class="p">(</span><span class="n">accept_flag</span><span class="o">.</span><span class="n">float</span><span class="p">()</span> <span class="o">-</span> <span class="n">accept_rate</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1">## exchange</span>
+    <span class="k">if</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_reps</span><span class="p">):</span>
+            <span class="n">accept_prop</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">alphas</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">alphas</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">energy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">energy</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">accept_flag</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">accept_prop</span>
+            <span class="k">if</span> <span class="n">accept_flag</span><span class="o">.</span><span class="n">item</span><span class="p">():</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+
+                <span class="n">tmp</span> <span class="o">=</span> <span class="n">energy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">energy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">energy</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">energy</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">10000</span><span class="p">:</span>
+            <span class="n">x_record</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
+
+<span class="n">x_record</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_record</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+idx of steps: 99999
+idx of steps: 199999
+idx of steps: 299999
+idx of steps: 399999
+idx of steps: 499999
+</pre></div></div>
+</div>
+</section>
+<section id="Step-8:-Visualize-the-Generated-Samples">
+<h2>Step 8: Visualize the Generated Samples<a class="headerlink" href="#Step-8:-Visualize-the-Generated-Samples" title="Link to this heading">#</a></h2>
+<p>Let’s plot the samples we generated from the Monte Carlo simulation. These samples should concentrate in the low-energy regions of the potential:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_samples</span> <span class="o">=</span> <span class="n">x_record</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="c1">#### plot samples</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_samples</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x_samples</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/examples_MullerPotential_MullerPotential_13_0.png" src="../../_images/examples_MullerPotential_MullerPotential_13_0.png" />
+</div>
+</div>
+</section>
+<section id="Step-9:-Prepare-Data-for-Contrastive-Learning">
+<h2>Step 9: Prepare Data for Contrastive Learning<a class="headerlink" href="#Step-9:-Prepare-Data-for-Contrastive-Learning" title="Link to this heading">#</a></h2>
+<p>For contrastive learning, we need both <strong>positive samples</strong> (from our target distribution) and <strong>negative samples</strong> (from a reference distribution). Here we:</p>
+<ol class="arabic simple">
+<li><p>Use our Monte Carlo samples as <strong>positive examples</strong> (data samples)</p></li>
+<li><p>Generate uniform random samples as <strong>negative examples</strong> (noise samples)</p></li>
+<li><p>Visualize both datasets to understand the contrast we’re learning</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">x_samples</span><span class="p">)</span>
+<span class="n">num_samples_p</span> <span class="o">=</span> <span class="n">xp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1">## samples from q</span>
+<span class="n">num_samples_q</span> <span class="o">=</span> <span class="n">num_samples_p</span>
+
+<span class="n">q_dist</span> <span class="o">=</span> <span class="n">distributions</span><span class="o">.</span><span class="n">Independent</span><span class="p">(</span>
+    <span class="n">distributions</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span>
+        <span class="n">low</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">]),</span> <span class="n">high</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">])</span>
+    <span class="p">),</span>
+    <span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">xq</span> <span class="o">=</span> <span class="n">q_dist</span><span class="o">.</span><span class="n">sample</span><span class="p">((</span><span class="n">num_samples_q</span><span class="p">,))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xp</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xp</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xq</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xq</span><span class="p">[::</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;noise&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span>
+    <span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span>
+    <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">left</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">labelleft</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;./output/data_and_noise_samples.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/examples_MullerPotential_MullerPotential_15_0.png" src="../../_images/examples_MullerPotential_MullerPotential_15_0.png" />
+</div>
+</div>
+</section>
+<section id="Step-10:-Learn-the-Potential-using-Contrastive-Learning">
+<h2>Step 10: Learn the Potential using Contrastive Learning<a class="headerlink" href="#Step-10:-Learn-the-Potential-using-Contrastive-Learning" title="Link to this heading">#</a></h2>
+<p>Now comes the core of the PCCG method! We’ll:</p>
+<ol class="arabic simple">
+<li><p><strong>Define B-spline basis functions</strong>: Create a flexible representation using tensor products of 1D B-splines</p></li>
+<li><p><strong>Set up basis functions</strong>: Transform our data points into the B-spline basis</p></li>
+<li><p><strong>Run contrastive learning</strong>: Use the <code class="docutils literal notranslate"><span class="pre">contrastive_learning</span></code> function to find parameters θ that best distinguish between data and noise samples</p></li>
+<li><p><strong>Reconstruct and visualize</strong>: Create the learned potential surface and compare it to the true potential</p></li>
+</ol>
+<p>The key insight is that by learning to distinguish data samples from noise samples, we implicitly learn the underlying energy landscape!</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">10</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">x2_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">10</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">x1_boundary_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">])</span>
+<span class="n">x2_boundary_knots</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">])</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_basis</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x1_knots</span><span class="p">,</span> <span class="n">x2_knots</span><span class="p">,</span> <span class="n">x1_boundary_knots</span><span class="p">,</span> <span class="n">x2_boundary_knots</span><span class="p">):</span>
+    <span class="n">x1_basis</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">x1_knots</span><span class="p">,</span> <span class="n">x1_boundary_knots</span><span class="p">)</span>
+    <span class="n">x2_basis</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">x2_knots</span><span class="p">,</span> <span class="n">x2_boundary_knots</span><span class="p">)</span>
+    <span class="n">x_basis</span> <span class="o">=</span> <span class="n">x1_basis</span><span class="p">[:,</span> <span class="p">:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">x2_basis</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">x_basis</span> <span class="o">=</span> <span class="n">x_basis</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="n">x_basis</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">x_basis</span>
+
+
+<span class="n">xp_basis</span> <span class="o">=</span> <span class="n">compute_basis</span><span class="p">(</span><span class="n">xp</span><span class="p">,</span> <span class="n">x1_knots</span><span class="p">,</span> <span class="n">x2_knots</span><span class="p">,</span> <span class="n">x1_boundary_knots</span><span class="p">,</span> <span class="n">x2_boundary_knots</span><span class="p">)</span>
+<span class="n">xq_basis</span> <span class="o">=</span> <span class="n">compute_basis</span><span class="p">(</span><span class="n">xq</span><span class="p">,</span> <span class="n">x1_knots</span><span class="p">,</span> <span class="n">x2_knots</span><span class="p">,</span> <span class="n">x1_boundary_knots</span><span class="p">,</span> <span class="n">x2_boundary_knots</span><span class="p">)</span>
+
+<span class="n">log_q_noise</span> <span class="o">=</span> <span class="n">q_dist</span><span class="o">.</span><span class="n">log_prob</span><span class="p">(</span><span class="n">xq</span><span class="p">)</span>
+<span class="n">log_q_data</span> <span class="o">=</span> <span class="n">q_dist</span><span class="o">.</span><span class="n">log_prob</span><span class="p">(</span><span class="n">xp</span><span class="p">)</span>
+
+<span class="n">theta</span><span class="p">,</span> <span class="n">F</span> <span class="o">=</span> <span class="n">contrastive_learning</span><span class="p">(</span>
+    <span class="n">log_q_noise</span><span class="p">,</span>
+    <span class="n">log_q_data</span><span class="p">,</span>
+    <span class="n">xq_basis</span><span class="p">,</span>
+    <span class="n">xp_basis</span><span class="p">,</span>
+    <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;disp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;gtol&quot;</span><span class="p">:</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="s2">&quot;ftol&quot;</span><span class="p">:</span> <span class="mf">1e-12</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="n">x_grid</span> <span class="o">=</span> <span class="n">generate_grid</span><span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">x_grid_basis</span> <span class="o">=</span> <span class="n">compute_basis</span><span class="p">(</span>
+    <span class="n">x_grid</span><span class="p">,</span> <span class="n">x1_knots</span><span class="p">,</span> <span class="n">x2_knots</span><span class="p">,</span> <span class="n">x1_boundary_knots</span><span class="p">,</span> <span class="n">x2_boundary_knots</span>
+<span class="p">)</span>
+<span class="n">up</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x_grid_basis</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+<span class="n">up</span> <span class="o">=</span> <span class="n">up</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">up</span> <span class="o">=</span> <span class="n">up</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+
+<span class="n">up</span> <span class="o">=</span> <span class="n">up</span> <span class="o">-</span> <span class="n">up</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">+</span> <span class="o">-</span><span class="mf">7.3296</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span>
+    <span class="n">up</span><span class="p">,</span>
+    <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">19</span><span class="p">),</span>
+    <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="n">x1_min</span><span class="p">,</span> <span class="n">x1_max</span><span class="p">,</span> <span class="n">x2_min</span><span class="p">,</span> <span class="n">x2_max</span><span class="p">),</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">viridis_r</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span>
+    <span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span>
+    <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">left</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">labelleft</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/examples_MullerPotential_MullerPotential_17_0.png" src="../../_images/examples_MullerPotential_MullerPotential_17_0.png" />
+</div>
+</div>
+</section>
+<section id="Summary">
+<h2>Summary<a class="headerlink" href="#Summary" title="Link to this heading">#</a></h2>
+<p>Congratulations! You’ve successfully used the PCCG library to learn a complex energy landscape. The key steps were:</p>
+<ol class="arabic simple">
+<li><p><strong>Data Generation</strong>: Used parallel tempering Monte Carlo to sample from the target distribution</p></li>
+<li><p><strong>Contrastive Setup</strong>: Prepared positive (data) and negative (noise) samples</p></li>
+<li><p><strong>Basis Functions</strong>: Represented the potential using flexible B-spline basis functions</p></li>
+<li><p><strong>Learning</strong>: Applied contrastive learning to distinguish between data and noise distributions</p></li>
+<li><p><strong>Reconstruction</strong>: Recovered an approximation of the original potential</p></li>
+</ol>
+<p>This approach is powerful because it can learn potentials from sample data without knowing the analytical form, making it applicable to real molecular systems where the potential is unknown or too complex to model directly.</p>
+<p>The learned potential should closely match the true Müller potential, demonstrating the effectiveness of the contrastive learning approach for energy surface reconstruction.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../examples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Examples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../API.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-1:-Import-Required-Libraries">Step 1: Import Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-2:-Müller-Potential-Definition">Step 2: Müller Potential Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-3:-Implementation-of-the-Müller-Potential">Step 3: Implementation of the Müller Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-4:-Grid-Generation-Helper-Function">Step 4: Grid Generation Helper Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-5:-Set-Parameters-and-Domain">Step 5: Set Parameters and Domain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-6:-Visualize-the-True-Müller-Potential">Step 6: Visualize the True Müller Potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-7:-Generate-Training-Data-using-Parallel-Tempering">Step 7: Generate Training Data using Parallel Tempering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-8:-Visualize-the-Generated-Samples">Step 8: Visualize the Generated Samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-9:-Prepare-Data-for-Contrastive-Learning">Step 9: Prepare Data for Contrastive Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Step-10:-Learn-the-Potential-using-Contrastive-Learning">Step 10: Learn the Potential using Contrastive Learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Xinqiang Ding; Bin Zhang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Xinqiang Ding; Bin Zhang.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
