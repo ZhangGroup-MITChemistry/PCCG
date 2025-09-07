@@ -1,0 +1,28 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - conda
+  - python=3.9
+  - ipython
+  - torchaudio
+  - torchvision
+  - cudatoolkit=11.3
+  - pytorch
+  - openmm
+  - mdtraj
+  - cvxpy
+  - ffmpeg
+  - sphinx
+  - pip=22.2.2
+  - sphinx-copybutton
+  - pip:
+    - sphinx-book-theme==0.3.3
+    - sphinx-copybutton==0.5.0
+    - scipy>=1.2.0
+    - torch==1.8.0
+    - numpy==1.21.0
+    - matplotlib==3.5.0
+  
+prefix: /home/xqding/apps/miniconda3
