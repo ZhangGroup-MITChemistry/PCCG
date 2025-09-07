@@ -6,4 +6,4 @@
 
 ## Getting Help
 
-Need help? Checkout the [documentation](https://pccg.readthedocs.io).
+Need help? Checkout the [documentation](https://zhanggroup-mitchemistry.github.io/PCCG/).
